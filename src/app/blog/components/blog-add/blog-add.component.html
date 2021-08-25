@@ -1,0 +1,14 @@
+<form [formGroup]="blogForm">
+  <label>Title</label>
+  <input name="postal_code" formControlName="title" />
+  <label>content</label>
+  <input name="postal_code" formControlName="blog" />
+  <label>excerpt</label>
+  <input name="postal_code" formControlName="excerpt" />
+  <label>Published on</label>
+  <input name="postal_code" formControlName="publishedOn" />
+  <label>Status</label>
+  <input name="postal_code" formControlName="status" />
+  <button (click)="saveBlog()">save</button>
+  <div (click)="back()">Go back</div>
+</form>

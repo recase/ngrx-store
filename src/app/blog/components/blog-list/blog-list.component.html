@@ -1,0 +1,8 @@
+<p>blog-list works!</p>
+<div (click)="newBlog()">Create new Blog</div>
+<div *ngFor="let post of posts">
+  <div>{{ post.title }}</div>
+  <div>{{ post.blog }}</div>
+  <div (click)="update(post.id)">Update</div>
+  <div (click)="deletePost(post.id)">Delete Post</div>
+</div>

@@ -1,0 +1,70 @@
+<div class="signup-container">
+  <div class="header">Sign up</div>
+  <div class="form-container">
+    <form [formGroup]="signupForm" (ngSubmit)="signup()">
+      <div class="input-container">
+        <label>Email</label>
+        <input type="email" class="form-field" formControlName="email" />
+        <div
+          class="error-container"
+          *ngIf="form.email.errors && form.email.dirty"
+        >
+          <div *ngIf="form.email.errors.required">*Email required!</div>
+        </div>
+      </div>
+      <div class="input-container">
+        <label>First Name</label>
+        <input type="text" class="form-field" formControlName="firstName" />
+        <div
+          class="error-container"
+          *ngIf="form.firstName.errors && form.firstName.dirty"
+        >
+          <div *ngIf="form.firstName.errors.required">
+            *First Name required!
+          </div>
+        </div>
+      </div>
+      <div class="input-container">
+        <label>Middle Name</label>
+        <input type="text" class="form-field" formControlName="middleName" />
+      </div>
+      <div class="input-container">
+        <label>Last Name</label>
+        <input type="lastName" class="form-field" formControlName="lastName" />
+        <div
+          class="error-container"
+          *ngIf="form.lastName.errors && form.lastName.dirty"
+        >
+          <div *ngIf="form.lastName.errors.required">*Last Name required!</div>
+        </div>
+      </div>
+      <div class="input-container">
+        <label>Password</label>
+        <input type="password" class="form-field" formControlName="password" />
+        <div
+          class="error-container"
+          *ngIf="form.password.errors && form.password.dirty"
+        >
+          <div *ngIf="form.password.errors.required">*password required!</div>
+        </div>
+      </div>
+      <div class="input-container">
+        <label>confirm Password</label>
+        <input
+          type="password"
+          class="form-field"
+          formControlName="passwordConfirm"
+        />
+        <div
+          class="error-container"
+          *ngIf="form.passwordConfirm.errors && form.passwordConfirm.dirty"
+        >
+          <div *ngIf="form.passwordConfirm.errors.required">
+            *password required!
+          </div>
+        </div>
+      </div>
+      <button type="submit">Sign up</button>
+    </form>
+  </div>
+</div>
